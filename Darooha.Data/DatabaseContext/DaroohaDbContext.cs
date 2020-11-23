@@ -19,8 +19,8 @@ namespace Darooha.Data.DatabaseContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"data source=.;initial catalog=Darooha;integrated security=True;multipleactiveresultsets=true");
-            optionsBuilder.UseSqlServer(@"Server=185.10.75.8;Database=darooha_db;User Id=darooha.main.db;Password=1741034681.Shm;");
+            optionsBuilder.UseSqlServer(@"data source=.;initial catalog=Darooha;integrated security=True;multipleactiveresultsets=true");
+            //optionsBuilder.UseSqlServer(@"Server=185.10.75.8;Database=darooha_db;User Id=darooha.main.db;Password=1741034681.Shm;");
             //optionsBuilder.UseSqlServer(@"data source=185.10.75.8;initial catalog=Darooha;integrated security=True;multipleactiveresultsets=true");
         }
 

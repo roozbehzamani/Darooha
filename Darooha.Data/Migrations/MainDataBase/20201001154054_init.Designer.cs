@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Darooha.Data.Migrations.MainDataBase
 {
     [DbContext(typeof(DaroohaDbContext))]
-    [Migration("20200912051701_init")]
+    [Migration("20201001154054_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Dtos\Api\" />
+    <Folder Include="Migrations\MainDataBase\" />
   </ItemGroup>
 
 </Project>

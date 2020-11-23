@@ -12149,23 +12149,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IT_Engineer\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Developer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universuty\\Project\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
+      "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
       "projectName": "Darooha.Test",
-      "projectPath": "D:\\Universuty\\Project\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
-      "packagesPath": "C:\\Users\\IT_Engineer\\.nuget\\packages\\",
-      "outputPath": "D:\\Universuty\\Project\\Darooha-Server\\Darooha\\Darooha.Test\\obj\\",
+      "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
+      "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+      "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\IT_Engineer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12178,8 +12174,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Universuty\\Project\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj": {
-              "projectPath": "D:\\Universuty\\Project\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj"
+            "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj": {
+              "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj"
             }
           }
         }
@@ -12242,7 +12238,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
