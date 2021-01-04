@@ -10,11 +10,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj",
         "projectName": "Darooha.Common",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,11 +79,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj",
         "projectName": "Darooha.Data",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -171,11 +171,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj",
         "projectName": "Darooha.Presentation",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -282,11 +282,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj",
         "projectName": "Darooha.Repo",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -341,11 +341,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj",
         "projectName": "Darooha.Services",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -410,11 +410,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
         "projectName": "Darooha.Test",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
