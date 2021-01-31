@@ -119,7 +119,7 @@ namespace Darooha.Test.UnitTests.ControllersTests
             Assert.Equal(401, okResult.StatusCode);
         }
         [Fact]
-        public async Task Login_Fail_ModelStateError()
+        public void Login_Fail_ModelStateError()
         {
             //Arrange------------------------------------------------------------------------------------------------------------------------------
             var controller = new ModelStateControllerTests();

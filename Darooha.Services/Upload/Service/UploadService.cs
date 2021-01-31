@@ -1,5 +1,6 @@
 ﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using Darooha.Common.ErrorsAndMessages;
 using Darooha.Data.DatabaseContext;
 using Darooha.Data.Dtos.Services;
 using Darooha.Data.Models;
@@ -227,6 +228,32 @@ namespace Darooha.Services.Upload.Service
                     Message = "فایلی با این نام وجود ندارد"
                 };
             }
+        }
+
+        public ReturnErrorMessage CreateDirectory(string WebRootPath, string Url)
+        {
+            try
+            {
+                var path = Path.Combine(WebRootPath, Url);
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                return new ReturnErrorMessage
+                {
+                    Status = true
+                };
+
+            }
+            catch (Exception ex)
+            {
+                return new ReturnErrorMessage
+                {
+                    Status = false,
+                    Message = ex.Message
+                };
+            }
+
         }
     }
 }

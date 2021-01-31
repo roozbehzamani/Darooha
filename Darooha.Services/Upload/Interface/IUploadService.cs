@@ -1,4 +1,5 @@
-﻿using Darooha.Data.Dtos.Services;
+﻿using Darooha.Common.ErrorsAndMessages;
+using Darooha.Data.Dtos.Services;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,6 @@ namespace Darooha.Services.Upload.Interface
         FileUploadedDTO RemoveFileFromLocal(string FileName, string WebRootPath, string FilePath);
         Task<FileUploadedDTO> UploadProfilePicToLocal(IFormFile file, string userID, string WebRootPath, string BaseUrl, string UrlUrl = "Files\\Pic\\Profile");
         Task<FileUploadedDTO> UploadProfilePic(IFormFile file, string userID, string WebRootPath, string BaseUrl, string ImageID);
+        ReturnErrorMessage CreateDirectory(string WebRootPath, string UrlUrl);
     }
 }

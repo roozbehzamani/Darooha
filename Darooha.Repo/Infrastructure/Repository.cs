@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Darooha.Common.Helpers.Helpers.Pagination;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -107,6 +108,15 @@ namespace Darooha.Repo.Infrastructure
                 return query.ToList();
             }
         }
+        public PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, string includeEntity)
+        {
+            var query = _dbSet.AsQueryable();
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
+        }
 
         #endregion
 
@@ -183,6 +193,17 @@ namespace Darooha.Repo.Infrastructure
             }
 
             return await query.Skip(firstCount).Skip(count * page).Take(count).ToListAsync();
+        }
+
+        public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, string includeEntity)
+        {
+            var query = _dbSet.AsQueryable();
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            return await PagedList<TEntity>.CreateAsync(query,
+                paginationDto.PageNumber, paginationDto.PageSize);
         }
 
         #endregion

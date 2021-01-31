@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Darooha.Common.Helpers.Helpers;
+using Darooha.Common.Helpers.Helpers.Pagination;
 using Darooha.Data.DatabaseContext;
 using Darooha.Data.Dtos.Site.App.Product;
 using Darooha.Data.Models;
@@ -30,10 +32,14 @@ namespace Darooha.Presentation.Controllers.Site.V1.App
         }
 
         [HttpGet(ApiV1Routes.Product.GetProductList)]
-        public async Task<IActionResult> GetProductList(string id)
+        public async Task<IActionResult> GetProductList(string id, [FromQuery] PaginationDto paginationDto)
         {
-            var getFourProduct = (await _db.ProductRepository.GetManyAsync(p => p.Tbl_SubMenu.ID.Equals(id), l => l.OrderByDescending(x => x.DateCreated), ""));
+            var getFourProduct = (await _db.ProductRepository.GetAllPagedListAsync(paginationDto, ""));
             var allProduct = _mapper.Map<IEnumerable<Tbl_Product>, List<ProductForReturnDto>>(getFourProduct);
+
+            Response.AddPagination(getFourProduct.CurrentPage, getFourProduct.PageSize,
+                    getFourProduct.TotalCount, getFourProduct.TotalPage);
+
             foreach (var item in allProduct)
             {
                 item.ImageUrl = (await _db.ProductImageRepository.GetManyAsync(p => p.ProductId == item.ID, null, "")).FirstOrDefault().ImageUrl;

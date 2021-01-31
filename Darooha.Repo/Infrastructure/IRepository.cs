@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Darooha.Common.Helpers.Helpers.Pagination;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace Darooha.Repo.Infrastructure
                 Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
                 string includeEntity
             );
+        PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, string includeEntity);
 
         //----------------------------------------------------------------------------------
 
@@ -43,13 +45,12 @@ namespace Darooha.Repo.Infrastructure
             );
         Task<IEnumerable<TEntity>> GetManyAsyncPaging(
             Expression<Func<TEntity, bool>> filter,
-
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy,
-
             string includeEntity,
             int count,
             int firstCount,
             int page
         );
+        Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, string includeEntity);
     }
 }
