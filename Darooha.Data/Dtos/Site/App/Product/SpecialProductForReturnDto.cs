@@ -17,5 +17,6 @@ namespace Darooha.Data.Dtos.Site.App.Product
         public int CommentCount { get; set; }
         public string ManufacturingCountry { get; set; }
         public string ManufacturerCompany { get; set; }
+        public string Discount { get; set; }
     }
 }

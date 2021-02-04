@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
 namespace Darooha.Data.Models
 {
@@ -14,10 +16,11 @@ namespace Darooha.Data.Models
         }
 
         [Required]
-        public string MenuName { get; set; }
+        public string subMenuName { get; set; }
+        //===========================================================
         [Required]
         public string MenuImage { get; set; }
-        //=============================================================================
-        public virtual ICollection<Tbl_SubMenu> Tbl_SubMenus { get; set; }
+        //===========================================================
+        public virtual ICollection<Tbl_Product> Tbl_Products { get; set; }
     }
 }

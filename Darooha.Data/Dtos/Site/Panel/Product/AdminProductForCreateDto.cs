@@ -43,5 +43,7 @@ namespace Darooha.Data.Dtos.Site.Panel.Product
         public string ScientificName { get; set; }
 
         public string SubMenuId { get; set; }
+
+        public string Discount { get; set; }
     }
 }

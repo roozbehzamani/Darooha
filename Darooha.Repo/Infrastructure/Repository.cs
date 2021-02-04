@@ -1,4 +1,5 @@
 ﻿using Darooha.Common.Helpers.Helpers.Pagination;
+using Darooha.Data.Dtos.Common.Pagination;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -118,6 +119,23 @@ namespace Darooha.Repo.Infrastructure
             return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
         }
 
+        public PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity,
+                bool>> filter = null, string includeEntity = null)
+        {
+            var query = _dbSet.AsQueryable();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
+        }
+
         #endregion
 
         #region async
@@ -198,6 +216,24 @@ namespace Darooha.Repo.Infrastructure
         public async Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, string includeEntity)
         {
             var query = _dbSet.AsQueryable();
+            foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeentity);
+            }
+            return await PagedList<TEntity>.CreateAsync(query,
+                paginationDto.PageNumber, paginationDto.PageSize);
+        }
+
+        public async Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity,
+            bool>> filter, string includeEntity)
+        {
+            var query = _dbSet.AsQueryable();
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
             foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeentity);

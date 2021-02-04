@@ -47,5 +47,7 @@ namespace Darooha.Data.Dtos.Site.Panel.Product
         public int SumPoint { get; set; } = 0;
 
         public int CommentCount { get; set; } = 0;
+
+        public string Discount { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Darooha.Data.Dtos.Site.App.Menu
 {
-    public class NewMenuForReturnDto
+    public class NewMenusForReturnDto
     {
         public string ID { get; set; }
         public string MenuName { get; set; }

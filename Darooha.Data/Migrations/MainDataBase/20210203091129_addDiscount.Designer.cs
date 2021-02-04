@@ -4,14 +4,16 @@ using Darooha.Data.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Darooha.Data.Migrations.MainDataBase
 {
     [DbContext(typeof(DaroohaDbContext))]
-    partial class DaroohaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210203091129_addDiscount")]
+    partial class addDiscount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Darooha.Common.Data
+namespace Darooha.Data.Common
 {
     public class Constants
     {

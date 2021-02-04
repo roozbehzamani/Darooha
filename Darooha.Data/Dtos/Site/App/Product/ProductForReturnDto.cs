@@ -46,6 +46,8 @@ namespace Darooha.Data.Dtos.Site.App.Product
 
         public int SumPoint { get; set; }        
 
-        public int CommentCount { get; set; }        
+        public int CommentCount { get; set; }
+
+        public string Discount { get; set; }
     }
 }

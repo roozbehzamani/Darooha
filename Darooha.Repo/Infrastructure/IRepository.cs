@@ -1,4 +1,5 @@
 ﻿using Darooha.Common.Helpers.Helpers.Pagination;
+using Darooha.Data.Dtos.Common.Pagination;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Darooha.Repo.Infrastructure
         void Update(TEntity entity);
         void Delete(object id);
         void Delete(TEntity entity);
-        void Delete(Expression<Func<TEntity,bool>> where);
+        void Delete(Expression<Func<TEntity, bool>> where);
 
 
         TEntity GetById(object id);
@@ -28,6 +29,8 @@ namespace Darooha.Repo.Infrastructure
                 string includeEntity
             );
         PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, string includeEntity);
+        PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity,
+                bool>> filter, string includeEntity);
 
         //----------------------------------------------------------------------------------
 
@@ -52,5 +55,7 @@ namespace Darooha.Repo.Infrastructure
             int page
         );
         Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, string includeEntity);
+        Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity,
+                bool>> filter, string includeEntity);
     }
 }

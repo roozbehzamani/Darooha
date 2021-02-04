@@ -1,9 +1,9 @@
-﻿using Darooha.Common.Data;
+﻿using Darooha.Data.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Darooha.Common.Helpers.Helpers.Pagination
+namespace Darooha.Data.Dtos.Common.Pagination
 {
     public class PaginationDto
     {
@@ -16,5 +16,7 @@ namespace Darooha.Common.Helpers.Helpers.Pagination
             get { return pageSize; }
             set { pageSize = (value > Constants.MaxPageSize) ? Constants.MaxPageSize : value; }
         }
+
+        public string Filter { get; set; }
     }
 }

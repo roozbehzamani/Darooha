@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Darooha.Data.Dtos.Common.Pagination;
 
-namespace Darooha.Data.Dtos.Site.Panel.Product
+namespace Darooha.Data.Dtos.Site.App.Product
 {
-    public class AdminProductForUpdateDto
+    public class ProductPaginationDt : PaginationDto
     {
+
         public string ProductName { get; set; }
 
         public int ProductPrice { get; set; }
 
-        public int ProductCount { get; set; }
-
-        public bool IsEnable { get; set; }
-
         public string Size { get; set; }
 
         public string Code { get; set; }
-
-        public short GenderOfConsumer { get; set; } //true: male false: female
 
         public string EnclosureType { get; set; } //نوع محفظه
 
@@ -36,12 +29,10 @@ namespace Darooha.Data.Dtos.Site.Panel.Product
 
         public string Warnings { get; set; }
 
+        public string Discount { get; set; } = "0";
+
         public string Maintenance { get; set; }
 
-        public bool IsSpecial { get; set; }
-
         public string ScientificName { get; set; }
-
-        public string Discount { get; set; }
     }
 }

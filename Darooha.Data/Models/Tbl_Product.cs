@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace Darooha.Data.Models
 {
@@ -46,6 +44,8 @@ namespace Darooha.Data.Models
         [Required]
         public string Warnings { get; set; }
         [Required]
+        public string Discount { get; set; } = "0";
+        [Required]
         public string Maintenance { get; set; }
         [Required]
         public bool IsSpecial { get; set; }
@@ -61,6 +61,6 @@ namespace Darooha.Data.Models
         //[Required]
         //public string SubMenuId { get; set; }
         //[ForeignKey("SubMenuId")]
-        public virtual Tbl_SubMenu Tbl_SubMenu { get; set; }
+        public virtual Tbl_Menu Tbl_Menu { get; set; }
     }
 }

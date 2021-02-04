@@ -4,14 +4,16 @@ using Darooha.Data.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Darooha.Data.Migrations.MainDataBase
 {
     [DbContext(typeof(DaroohaDbContext))]
-    partial class DaroohaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210203062637_deleteSubMenu")]
+    partial class deleteSubMenu
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,7 +194,7 @@ namespace Darooha.Data.Migrations.MainDataBase
 
                     b.HasKey("ID");
 
-                    b.ToTable("Tbl_Menues");
+                    b.ToTable("Tbl_SubMenues");
                 });
 
             modelBuilder.Entity("Darooha.Data.Models.Tbl_Order", b =>
@@ -278,10 +280,6 @@ namespace Darooha.Data.Migrations.MainDataBase
 
                     b.Property<DateTime>("DateModified")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Discount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EnclosureType")
                         .IsRequired()

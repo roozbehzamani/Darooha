@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Darooha.Common.Helpers.Helpers;
-using Darooha.Common.Helpers.Helpers.Pagination;
 using Darooha.Data.DatabaseContext;
+using Darooha.Data.Dtos.Common.Pagination;
 using Darooha.Data.Dtos.Site.App.Product;
 using Darooha.Data.Models;
 using Darooha.Presentation.Routes.V1;
 using Darooha.Repo.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Darooha.Presentation.Controllers.Site.V1.App
 {
@@ -34,7 +31,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.App
         [HttpGet(ApiV1Routes.Product.GetProductList)]
         public async Task<IActionResult> GetProductList(string id, [FromQuery] PaginationDto paginationDto)
         {
-            var getFourProduct = (await _db.ProductRepository.GetAllPagedListAsync(paginationDto, ""));
+            var getFourProduct = (await _db.ProductRepository.GetManyPagedListAsync(paginationDto, paginationDto.Filter.ToProductExpression(id), ""));
             var allProduct = _mapper.Map<IEnumerable<Tbl_Product>, List<ProductForReturnDto>>(getFourProduct);
 
             Response.AddPagination(getFourProduct.CurrentPage, getFourProduct.PageSize,

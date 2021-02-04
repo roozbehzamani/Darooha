@@ -249,19 +249,6 @@ namespace Darooha.Repo.Infrastructure
             }
         }
         //
-        private ISubMenuRepository subMenuRepository;
-        public ISubMenuRepository SubMenuRepository
-        {
-            get
-            {
-                if (subMenuRepository == null)
-                {
-                    subMenuRepository = new SubMenuRepository(_db);
-                }
-                return subMenuRepository;
-            }
-        }
-        //
         private IHomeFirstSliderRepository homeFirstSliderRepository;
         public IHomeFirstSliderRepository HomeFirstSliderRepository
         {

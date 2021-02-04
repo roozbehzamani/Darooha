@@ -36,7 +36,6 @@ namespace Darooha.Data.DatabaseContext
         public DbSet<Tbl_Product> Tbl_Products { get; set; }
         public DbSet<Tbl_ProductImage> Tbl_ProductImages { get; set; }
         public DbSet<Tbl_Menu> Tbl_Menues { get; set; }
-        public DbSet<Tbl_SubMenu> Tbl_SubMenues { get; set; }
         public DbSet<Tbl_HomeFirstSlider> Tbl_HomeFirstSlider { get; set; }
         public DbSet<Tbl_Comment> Tbl_Comments { get; set; }
 

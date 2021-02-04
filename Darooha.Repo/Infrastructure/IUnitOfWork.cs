@@ -26,7 +26,6 @@ namespace Darooha.Repo.Infrastructure
         IOrderRepository OrderRepository { get; }
         IOrderItemRepository OrderItemRepository { get; }
         IMenuRepository MenuRepository { get; }
-        ISubMenuRepository SubMenuRepository { get; }
         IHomeFirstSliderRepository HomeFirstSliderRepository { get; }
         ICommentRepository CommentRepository { get; }
     }

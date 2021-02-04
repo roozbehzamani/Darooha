@@ -64,7 +64,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.App
         public async Task<IActionResult> GetNewMenus()
         {
             var getMenu = (await _db.MenuRepository.GetAllAsync()).OrderByDescending(x => x.DateCreated).Take(6);
-            var allItems = _mapper.Map<IEnumerable<Tbl_Menu>, List<NewMenuForReturnDto>>(getMenu);
+            var allItems = _mapper.Map<IEnumerable<Tbl_Menu>, List<NewMenusForReturnDto>>(getMenu);
             return Ok(allItems);
         }
     }

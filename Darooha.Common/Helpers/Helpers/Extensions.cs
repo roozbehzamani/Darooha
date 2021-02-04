@@ -1,11 +1,10 @@
 ﻿using Darooha.Common.Helpers.Helpers.Pagination;
+using Darooha.Data.Models;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+using System.Linq.Expressions;
 
 namespace Darooha.Common.Helpers.Helpers
 {
@@ -40,6 +39,40 @@ namespace Darooha.Common.Helpers.Helpers
             }
 
             return age;
+        }
+
+        public static Expression<Func<Tbl_Product, bool>> ToProductExpression(this string Filter, string id)
+        {
+            if (string.IsNullOrEmpty(Filter) || string.IsNullOrWhiteSpace(Filter))
+            {
+                Expression<Func<Tbl_Product, bool>> exp = p => p.Tbl_Menu.ID.Equals(id);
+                return exp;
+            }
+            else
+            {
+                Expression<Func<Tbl_Product, bool>> exp =
+                                p => p.Tbl_Menu.ID == id.ToString() &&
+                                p.ProductName.Contains(Filter) ||
+                                p.ProductPrice.ToString().Contains(Filter) ||
+                                p.Size.Contains(Filter) ||
+                                p.Code.Contains(Filter) ||
+                                p.EnclosureType.Contains(Filter) ||
+                                p.ManufacturingCountry.Contains(Filter) ||
+                                p.ManufacturerCompany.Contains(Filter) ||
+                                p.WebAddress.Contains(Filter) ||
+                                p.Features.Contains(Filter) ||
+                                p.MethodUse.Contains(Filter) ||
+                                p.Indications.Contains(Filter) ||
+                                p.Warnings.Contains(Filter) ||
+                                p.Discount.Contains(Filter) ||
+                                p.Maintenance.Contains(Filter) ||
+                                p.ScientificName.Contains(Filter);
+
+                string test = exp.ToString();
+
+                return exp;
+            }
+
         }
     }
 }
