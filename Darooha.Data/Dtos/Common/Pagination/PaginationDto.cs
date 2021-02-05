@@ -18,5 +18,9 @@ namespace Darooha.Data.Dtos.Common.Pagination
         }
 
         public string Filter { get; set; }
+        //SortHeader
+        public string SortHe { get; set; }
+        //SortDirection
+        public string SortDir { get; set; }
     }
 }

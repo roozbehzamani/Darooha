@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace Darooha.Common.Helpers.Helpers
@@ -73,6 +74,20 @@ namespace Darooha.Common.Helpers.Helpers
                 return exp;
             }
 
+        }
+
+        public static string ToProductOrderBy(this string sortHe, string sortDir)
+        {
+            if (string.IsNullOrEmpty(sortHe) || string.IsNullOrWhiteSpace(sortHe))
+                return "";
+            else
+            {
+                return sortHe.FirstCharToUpper() + "," + sortDir;
+            }
+        }
+        public static string FirstCharToUpper(this string input)
+        {
+            return input.First().ToString().ToUpper() + input.Substring(1);
         }
     }
 }

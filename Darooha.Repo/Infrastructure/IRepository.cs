@@ -29,8 +29,8 @@ namespace Darooha.Repo.Infrastructure
                 string includeEntity
             );
         PagedList<TEntity> GetAllPagedList(PaginationDto paginationDto, string includeEntity);
-        PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity,
-                bool>> filter, string includeEntity);
+        PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter,
+            string orderBy, string includeEntity);
 
         //----------------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ namespace Darooha.Repo.Infrastructure
             int page
         );
         Task<PagedList<TEntity>> GetAllPagedListAsync(PaginationDto paginationDto, string includeEntity);
-        Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity,
-                bool>> filter, string includeEntity);
+        Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter,
+            string orderBy, string includeEntity);
     }
 }

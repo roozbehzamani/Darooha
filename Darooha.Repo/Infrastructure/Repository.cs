@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Darooha.Common.Helpers.Helpers;
 
 namespace Darooha.Repo.Infrastructure
 {
@@ -119,19 +120,36 @@ namespace Darooha.Repo.Infrastructure
             return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
         }
 
-        public PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity,
-                bool>> filter = null, string includeEntity = null)
+        public PagedList<TEntity> GetManyPagedList(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter = null,
+            string orderBy = "", string includeEntity = null)
         {
             var query = _dbSet.AsQueryable();
-
+            //filter
             if (filter != null)
             {
                 query = query.Where(filter);
             }
-
+            //include
             foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeentity);
+            }
+            //orderby
+            if (string.IsNullOrEmpty(orderBy) || string.IsNullOrWhiteSpace(orderBy))
+            {
+                if (orderBy.Split(',')[1] == "asc")
+                {
+                    query = query.OrderBy(orderBy.Split(',')[0]);
+                }
+                else if (orderBy.Split(',')[1] == "desc")
+                {
+                    query = query.OrderByDescending(orderBy.Split(',')[0]);
+                }
+                else
+                {
+                    query = query.OrderBy(orderBy.Split(',')[0]);
+                }
+
             }
             return PagedList<TEntity>.Create(query, paginationDto.PageNumber, paginationDto.PageSize);
         }
@@ -224,20 +242,38 @@ namespace Darooha.Repo.Infrastructure
                 paginationDto.PageNumber, paginationDto.PageSize);
         }
 
-        public async Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity,
-            bool>> filter, string includeEntity)
+        public async Task<PagedList<TEntity>> GetManyPagedListAsync(PaginationDto paginationDto, Expression<Func<TEntity, bool>> filter = null,
+            string orderBy = "", string includeEntity = null)
         {
             var query = _dbSet.AsQueryable();
-
+            //filter
             if (filter != null)
             {
                 query = query.Where(filter);
             }
-
+            //include
             foreach (var includeentity in includeEntity.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
                 query = query.Include(includeentity);
             }
+            //orderby
+            if (!string.IsNullOrEmpty(orderBy) && !string.IsNullOrWhiteSpace(orderBy))
+            {
+                if (orderBy.Split(',')[1] == "asc")
+                {
+                    query = query.OrderBy(orderBy.Split(',')[0]);
+                }
+                else if (orderBy.Split(',')[1] == "desc")
+                {
+                    query = query.OrderByDescending(orderBy.Split(',')[0]);
+                }
+                else
+                {
+                    query = query.OrderBy(orderBy.Split(',')[0]);
+                }
+
+            }
+            //
             return await PagedList<TEntity>.CreateAsync(query,
                 paginationDto.PageNumber, paginationDto.PageSize);
         }

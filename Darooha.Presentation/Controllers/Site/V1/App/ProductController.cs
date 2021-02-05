@@ -31,7 +31,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.App
         [HttpGet(ApiV1Routes.Product.GetProductList)]
         public async Task<IActionResult> GetProductList(string id, [FromQuery] PaginationDto paginationDto)
         {
-            var getFourProduct = (await _db.ProductRepository.GetManyPagedListAsync(paginationDto, paginationDto.Filter.ToProductExpression(id), ""));
+            var getFourProduct = (await _db.ProductRepository.GetManyPagedListAsync(paginationDto, paginationDto.Filter.ToProductExpression(id), paginationDto.SortHe.ToProductOrderBy(paginationDto.SortDir), ""));
             var allProduct = _mapper.Map<IEnumerable<Tbl_Product>, List<ProductForReturnDto>>(getFourProduct);
 
             Response.AddPagination(getFourProduct.CurrentPage, getFourProduct.PageSize,
