@@ -110,7 +110,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.User
                     {
                         if (ticketForCreateDto.File.Length > 0)
                         {
-                            var uploadRes = await _uploadService.UploadProfilePicToLocal(
+                            var uploadRes = await _uploadService.UploadPicToLocal(
                                 ticketForCreateDto.File,
                                 userId,
                                 _env.WebRootPath,
@@ -215,7 +215,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.User
             {
                 if (ticketContentForCreateDto.File.Length > 0)
                 {
-                    var uploadRes = await _uploadService.UploadProfilePicToLocal(
+                    var uploadRes = await _uploadService.UploadPicToLocal(
                         ticketContentForCreateDto.File,
                         userId,
                         _env.WebRootPath,

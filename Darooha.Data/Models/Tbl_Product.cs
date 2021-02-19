@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Darooha.Data.Models
 {
@@ -58,9 +59,9 @@ namespace Darooha.Data.Models
         public virtual ICollection<Tbl_HomeFirstSlider> Tbl_HomeFirstSlider { get; set; }
         public virtual ICollection<Tbl_Comment> Tbl_Comments { get; set; }
         //==============================================================
-        //[Required]
-        //public string SubMenuId { get; set; }
-        //[ForeignKey("SubMenuId")]
+
         public virtual Tbl_Menu Tbl_Menu { get; set; }
+        //==============================================================
+        public virtual Tbl_Brand Tbl_Brands { get; set; }
     }
 }

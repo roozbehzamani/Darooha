@@ -34,7 +34,7 @@ namespace Darooha.Services.Upload.Service
             _cloudinary = new Cloudinary(acc);
         }
 
-        public async Task<FileUploadedDTO> UploadProfilePic(IFormFile file, string userID, string WebRootPath, string BaseUrl, string ImageID)
+        public async Task<FileUploadedDTO> UploadPic(IFormFile file, string userID, string WebRootPath, string BaseUrl, string ImageID, string folderName)
         {
             if (_setting.UploadLocal)
             {
@@ -43,7 +43,7 @@ namespace Darooha.Services.Upload.Service
                     var deleteFromCloude = RemoveFileFromCloudinary(ImageID);
                     if (deleteFromCloude.Status)
                     {
-                        var uploadLocalRes = await UploadProfilePicToLocal(file, userID, WebRootPath, BaseUrl);
+                        var uploadLocalRes = await UploadPicToLocal(file, userID, WebRootPath, BaseUrl);
                         return uploadLocalRes;
                     }
                     else
@@ -53,7 +53,7 @@ namespace Darooha.Services.Upload.Service
                 }
                 else
                 {
-                    var uploadCloudeRes = UploadToCloudinary(file);
+                    var uploadCloudeRes = UploadToCloudinary(file, folderName);
                     return uploadCloudeRes;
 
                 }
@@ -65,7 +65,7 @@ namespace Darooha.Services.Upload.Service
                     var deleteFromCloude = RemoveFileFromCloudinary(ImageID);
                     if (deleteFromCloude.Status)
                     {
-                        var uploadCloudeRes = UploadToCloudinary(file);
+                        var uploadCloudeRes = UploadToCloudinary(file, folderName);
                         return uploadCloudeRes;
                     }
                     else
@@ -79,13 +79,13 @@ namespace Darooha.Services.Upload.Service
                     string fileExtention = Path.GetExtension(fileName);
                     string fileNewName = string.Format("{0}{1}", userID, fileExtention);
                     RemoveFileFromLocal(fileNewName, WebRootPath, "Files\\Pic\\Profile");
-                    var uploadCloudeRes = UploadToCloudinary(file);
+                    var uploadCloudeRes = UploadToCloudinary(file, folderName);
                     return uploadCloudeRes;
                 }
             }
         }
 
-        public async Task<FileUploadedDTO> UploadProfilePicToLocal(IFormFile file, string userID, string WebRootPath, string BaseUrl, string Url = "Files\\Pic\\Profile")
+        public async Task<FileUploadedDTO> UploadPicToLocal(IFormFile file, string userID, string WebRootPath, string BaseUrl, string Url = "Files\\Pic\\Profile")
         {
             if (file.Length > 0)
             {
@@ -128,7 +128,7 @@ namespace Darooha.Services.Upload.Service
             }
         }
 
-        public FileUploadedDTO UploadToCloudinary(IFormFile file)
+        public FileUploadedDTO UploadToCloudinary(IFormFile file, string folderName)
         {
             var uploadResult = new ImageUploadResult();
             if (file.Length > 0)
@@ -139,7 +139,7 @@ namespace Darooha.Services.Upload.Service
                     {
                         File = new FileDescription(file.Name, stream),
                         Transformation = new Transformation().Width(250).Height(250).Crop("fill").Gravity("face"),
-                        Folder = "profile"
+                        Folder = folderName
                     };
                     try
                     {

@@ -28,5 +28,6 @@ namespace Darooha.Repo.Infrastructure
         IMenuRepository MenuRepository { get; }
         IHomeFirstSliderRepository HomeFirstSliderRepository { get; }
         ICommentRepository CommentRepository { get; }
+        IBrandRepository BrandRepository { get; }
     }
 }

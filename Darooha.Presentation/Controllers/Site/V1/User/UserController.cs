@@ -91,5 +91,13 @@ namespace Darooha.Presentation.Controllers.Site.V1.User
                 });
             }
         }
+
+        [AllowAnonymous]
+        [HttpGet(ApiV1Routes.Users.GetUsers)]
+        public async Task<IActionResult> GetUsers()
+        {
+            var user = await _db.UserRepository.GetAllAsync();
+            return Ok(user);
+        }
     }
 }

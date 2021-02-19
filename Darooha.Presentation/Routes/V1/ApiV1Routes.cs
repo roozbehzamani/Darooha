@@ -30,6 +30,23 @@ namespace Darooha.Presentation.Routes.V1
 
         #endregion
 
+        #region AdminRoutes
+
+        public static class AdminBrands
+        {
+            //api/v1/site/panel/{userId}/Admin/AllProductList
+            //GET
+            public const string AllBrandList = BaseSitePanel + "/{userId}/Admin/AllBrandList";
+            //api/v1/site/panel/users/{userId}/documents
+            //POST
+            public const string AddBrand = BaseSitePanel + "/admin/{userId}/brands";
+            //api/v1/site/panel/{userId}/Admin/deleteBrand/{id}
+            //Delete
+            public const string DeleteBrand = BaseSitePanel + "/{userId}/Admin/deleteBrand/{id}";
+        }
+
+        #endregion
+
         #region UsersRoutes
 
         public static class Users
@@ -220,7 +237,7 @@ namespace Darooha.Presentation.Routes.V1
         }
         #endregion
 
-        #region UserAddressRoutes
+        #region AdminProductsRoutes
         public static class AdminProduct
         {
             //api/v1/site/panel/{userId}/Admin/SingleProduct/{id}

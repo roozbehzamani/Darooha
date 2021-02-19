@@ -274,6 +274,19 @@ namespace Darooha.Repo.Infrastructure
                 return commentRepository;
             }
         }
+        //
+        private IBrandRepository brandRepository;
+        public IBrandRepository BrandRepository
+        {
+            get
+            {
+                if (brandRepository == null)
+                {
+                    brandRepository = new BrandRepository(_db);
+                }
+                return brandRepository;
+            }
+        }
 
         #endregion
     }

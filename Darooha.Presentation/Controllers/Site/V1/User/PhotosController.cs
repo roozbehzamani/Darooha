@@ -41,7 +41,7 @@ namespace Darooha.Presentation.Controllers.Site.V1.User
         {
             var userFromRepo = await _db.UserRepository.GetByIdAsync(userId);
             string baseUrl = string.Format("{0}://{1}{2}", Request.Scheme ?? "", Request.Host.Value ?? "", Request.PathBase.Value ?? "");
-            var uploadRes = await _uploadService.UploadProfilePic(photoForUserProfileDTO.File, userFromRepo.Id, _env.WebRootPath, baseUrl, userFromRepo.ImageID);
+            var uploadRes = await _uploadService.UploadPic(photoForUserProfileDTO.File, userFromRepo.Id, _env.WebRootPath, baseUrl, userFromRepo.ImageID, "Profile");
 
             if (uploadRes.Status)
             {

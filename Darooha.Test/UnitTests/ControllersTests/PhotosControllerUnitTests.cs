@@ -126,8 +126,8 @@ namespace Darooha.Test.UnitTests.ControllersTests
             _mockRepo.Setup(x => x.UserRepository.GetByIdAsync(It.IsAny<string>()))
                 .ReturnsAsync(UnitTestsDataInput.GetUser.First());
 
-            _mockUploadService.Setup(x => x.UploadProfilePic(It.IsAny<IFormFile>(),
-                    It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+            _mockUploadService.Setup(x => x.UploadPic(It.IsAny<IFormFile>(),
+                    It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), "Profile"))
                 .ReturnsAsync(UnitTestsDataInput.fileUploadedDto_Success);
 
             _mockRepo.Setup(x => x.UserRepository.Update(It.IsAny<Tbl_User>()));
@@ -162,8 +162,8 @@ namespace Darooha.Test.UnitTests.ControllersTests
             _mockRepo.Setup(x => x.UserRepository.GetByIdAsync(It.IsAny<string>()))
                 .ReturnsAsync(UnitTestsDataInput.GetUser.First());
 
-            _mockUploadService.Setup(x => x.UploadProfilePic(It.IsAny<IFormFile>(),
-                    It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
+            _mockUploadService.Setup(x => x.UploadPic(It.IsAny<IFormFile>(),
+                    It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), "Profile"))
                 .ReturnsAsync(UnitTestsDataInput.fileUploadedDto_Fail_WrongFile);
 
             _mockRepo.Setup(x => x.UserRepository.Update(It.IsAny<Tbl_User>()));

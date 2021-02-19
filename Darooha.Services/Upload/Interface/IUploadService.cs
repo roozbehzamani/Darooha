@@ -10,11 +10,11 @@ namespace Darooha.Services.Upload.Interface
 {
     public interface IUploadService
     {
-        FileUploadedDTO UploadToCloudinary(IFormFile file);
+        FileUploadedDTO UploadToCloudinary(IFormFile file, string folderName);
         FileUploadedDTO RemoveFileFromCloudinary(string publicID);
         FileUploadedDTO RemoveFileFromLocal(string FileName, string WebRootPath, string FilePath);
-        Task<FileUploadedDTO> UploadProfilePicToLocal(IFormFile file, string userID, string WebRootPath, string BaseUrl, string UrlUrl = "Files\\Pic\\Profile");
-        Task<FileUploadedDTO> UploadProfilePic(IFormFile file, string userID, string WebRootPath, string BaseUrl, string ImageID);
+        Task<FileUploadedDTO> UploadPicToLocal(IFormFile file, string userID, string WebRootPath, string BaseUrl, string UrlUrl = "Files\\Pic\\Profile");
+        Task<FileUploadedDTO> UploadPic(IFormFile file, string userID, string WebRootPath, string BaseUrl, string ImageID, string folderName);
         ReturnErrorMessage CreateDirectory(string WebRootPath, string UrlUrl);
     }
 }

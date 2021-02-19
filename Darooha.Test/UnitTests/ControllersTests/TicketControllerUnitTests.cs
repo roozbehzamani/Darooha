@@ -363,7 +363,7 @@ namespace Darooha.Test.UnitTests.ControllersTests
             _mockRepo.Setup(x => x.SaveAsync()).ReturnsAsync(true);
 
 
-            _mockUploadService.Setup(x => x.UploadProfilePicToLocal(It.IsAny<IFormFile>(),
+            _mockUploadService.Setup(x => x.UploadPicToLocal(It.IsAny<IFormFile>(),
                     It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .ReturnsAsync(UnitTestsDataInput.fileUploadedDto_Success);
 
@@ -410,7 +410,7 @@ namespace Darooha.Test.UnitTests.ControllersTests
             _mockRepo.Setup(x => x.SaveAsync()).ReturnsAsync(true);
 
 
-            _mockUploadService.Setup(x => x.UploadProfilePicToLocal(It.IsAny<IFormFile>(),
+            _mockUploadService.Setup(x => x.UploadPicToLocal(It.IsAny<IFormFile>(),
                     It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .ReturnsAsync(UnitTestsDataInput.fileUploadedDto_Success);
 
@@ -449,7 +449,7 @@ namespace Darooha.Test.UnitTests.ControllersTests
 
             var file = fileMock.Object;
 
-            _mockUploadService.Setup(x => x.UploadProfilePicToLocal(It.IsAny<IFormFile>(),
+            _mockUploadService.Setup(x => x.UploadPicToLocal(It.IsAny<IFormFile>(),
                     It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .ReturnsAsync(UnitTestsDataInput.fileUploadedDto_Fail_WrongFile);
 

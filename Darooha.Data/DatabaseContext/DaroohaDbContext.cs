@@ -38,6 +38,7 @@ namespace Darooha.Data.DatabaseContext
         public DbSet<Tbl_Menu> Tbl_Menues { get; set; }
         public DbSet<Tbl_HomeFirstSlider> Tbl_HomeFirstSlider { get; set; }
         public DbSet<Tbl_Comment> Tbl_Comments { get; set; }
+        public DbSet<Tbl_Brand> Tbl_Brands { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -13,6 +13,7 @@ using Darooha.Data.Dtos.Site.App.Product;
 using Darooha.Data.Dtos.Site.App.Slider;
 using Darooha.Data.Dtos.Site.App.Comment;
 using Darooha.Data.Dtos.Site.Panel.Product;
+using Darooha.Data.Dtos.Site.Panel.Admin.Brand;
 
 namespace Darooha.Presentation.Helpers
 {
@@ -78,6 +79,9 @@ namespace Darooha.Presentation.Helpers
             CreateMap<Tbl_Product, AdminProductListForReturnDto>();
             CreateMap<AdminProductForCreateDto, Tbl_Product>();
             CreateMap<AdminProductForUpdateDto, Tbl_Product>();
+            //Brand
+            CreateMap<Tbl_Brand, BrandListForReturnDto>();
+            CreateMap<BrandForCreateDto, Tbl_Brand>();
         }
     }
 }
