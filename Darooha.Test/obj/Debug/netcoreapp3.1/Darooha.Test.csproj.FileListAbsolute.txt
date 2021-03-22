@@ -260,12 +260,12 @@ D:\Universuty\Project\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\nlog.config
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\appsettings.Development.json
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Darooha.Presentation.exe
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\xunit.runner.json
-F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Darooha.Presentation.exe
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Darooha.Test.deps.json
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Darooha.Test.runtimeconfig.json
 F:\Darooha-Server\Darooha\Darooha.Test\bin\Debug\netcoreapp3.1\Darooha.Test.runtimeconfig.dev.json
