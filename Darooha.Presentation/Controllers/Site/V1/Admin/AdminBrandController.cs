@@ -121,5 +121,49 @@ namespace Darooha.Presentation.Controllers.Site.V1.Admin
 
 
         }
+
+        [Authorize(Policy = "RequireAdminRole")]
+        [ServiceFilter(typeof(UserCheckIdFilter))]
+        [HttpGet(ApiV1Routes.AdminBrands.GetBrand)]
+        public async Task<IActionResult> GetBrand(string id, string userId)
+        {
+            var brand = await _db.BrandRepository.GetByIdAsync(id);
+            if (brand != null)
+            {
+                var brandForreturn = _mapper.Map<BrandForReturnDto>(brand);
+
+                return Ok(brandForreturn);
+            }
+            else
+            {
+                return BadRequest("چنبن برندی وجود ندارد");
+            }
+        }
+
+        [Authorize(Policy = "RequireAdminRole")]
+        [ServiceFilter(typeof(UserCheckIdFilter))]
+        [HttpPut(ApiV1Routes.AdminBrands.UpdateBrand)]
+        public async Task<IActionResult> UpdateBrand(string id, string userId, [FromForm] BrandForUpdateDto brandForUpdateDto)
+        {
+            var brandFromRepo = await _db.BrandRepository.GetByIdAsync(id);
+            if (brandFromRepo != null)
+            {
+                var brand = _mapper.Map(brandForUpdateDto, brandFromRepo);
+                _db.BrandRepository.Update(brand);
+
+                if (await _db.SaveAsync())
+                {
+                    return NoContent();
+                }
+                else
+                {
+                    return BadRequest("خطا در بروزرسانی اطلاعات");
+                }
+            }
+            else
+            {
+                return BadRequest("چنین برندی وجود ندارد");
+            }
+        }
     }
 }

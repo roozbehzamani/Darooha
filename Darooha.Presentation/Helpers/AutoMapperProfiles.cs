@@ -81,7 +81,9 @@ namespace Darooha.Presentation.Helpers
             CreateMap<AdminProductForUpdateDto, Tbl_Product>();
             //Brand
             CreateMap<Tbl_Brand, BrandListForReturnDto>();
+            CreateMap<Tbl_Brand, BrandForReturnDto>();
             CreateMap<BrandForCreateDto, Tbl_Brand>();
+            CreateMap<BrandForUpdateDto, Tbl_Brand>();
         }
     }
 }

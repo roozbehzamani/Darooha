@@ -10,15 +10,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj",
         "projectName": "Darooha.Common",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj": {
                 "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj"
@@ -46,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -68,11 +62,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -82,15 +79,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj",
         "projectName": "Darooha.Data",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\Darooha.Data.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,7 +95,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -114,7 +106,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
@@ -170,7 +161,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -180,15 +171,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj",
         "projectName": "Darooha.Presentation",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -200,7 +187,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj": {
                 "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj"
@@ -216,7 +202,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -287,7 +272,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -297,15 +282,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj",
         "projectName": "Darooha.Repo",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -317,7 +298,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj": {
                 "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Common\\Darooha.Common.csproj"
@@ -333,7 +313,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -345,11 +324,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -359,15 +341,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj",
         "projectName": "Darooha.Services",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\Darooha.Services.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -379,7 +357,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj": {
                 "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Repo\\Darooha.Repo.csproj"
@@ -395,7 +372,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "CloudinaryDotNet": {
               "target": "Package",
@@ -417,11 +393,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -431,15 +410,11 @@
         "projectUniqueName": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
         "projectName": "Darooha.Test",
         "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\Darooha.Test.csproj",
-        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zaman\\.nuget\\packages\\",
         "outputPath": "F:\\Darooha-Server\\Darooha\\Darooha.Test\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\zaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -451,7 +426,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj": {
                 "projectPath": "F:\\Darooha-Server\\Darooha\\Darooha.Presentation\\Darooha.Presentation.csproj"
@@ -467,7 +441,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
@@ -511,11 +484,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

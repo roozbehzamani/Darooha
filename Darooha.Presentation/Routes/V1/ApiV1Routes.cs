@@ -43,6 +43,12 @@ namespace Darooha.Presentation.Routes.V1
             //api/v1/site/panel/{userId}/Admin/deleteBrand/{id}
             //Delete
             public const string DeleteBrand = BaseSitePanel + "/{userId}/Admin/deleteBrand/{id}";
+            //api/v1/site/panel/{userId}/Admin/getBrand/{id}
+            //GET
+            public const string GetBrand = BaseSitePanel + "/{userId}/Admin/getBrand/{id}";
+            //api/v1/site/panel/{userId}/Admin/UpdateProduct/{id}
+            //Put
+            public const string UpdateBrand = BaseSitePanel + "/{userId}/Admin/UpdateBrand/{id}";
         }
 
         #endregion
