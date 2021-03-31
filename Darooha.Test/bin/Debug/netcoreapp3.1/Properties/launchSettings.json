@@ -19,7 +19,8 @@
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
-      }
+      },
+      "ancmHostingModel": "OutOfProcess"
     },
     "Darooha.Presentation": {
       "commandName": "Project",

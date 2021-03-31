@@ -26,10 +26,7 @@ namespace Darooha.Services.Site.Admin.Wallet.Service
                 .GetManyAsync(p => p.UserId == userID, null, "")).SingleOrDefault();
             if (wallet != null)
             {
-                if (wallet.Inventory >= cost)
-                    return true;
-                else
-                    return false;
+                return (wallet.Inventory >= cost);
             }
             else
             {
@@ -42,7 +39,7 @@ namespace Darooha.Services.Site.Admin.Wallet.Service
 
                 if (await _db.SaveAsync())
                 {
-                    return false;
+                    return true;
                 }
                 else
                 {

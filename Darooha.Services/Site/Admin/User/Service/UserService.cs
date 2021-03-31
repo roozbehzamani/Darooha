@@ -23,16 +23,9 @@ namespace Darooha.Services.Site.Admin.User.Service
             _utilities = utilities;
         }
 
-        public async Task<Tbl_User> GetUserForPassChange(string id, string Password)
-        {
-            var user = await _db.UserRepository.GetByIdAsync(id);
-
-            if (user == null)
-                return null;
-
-
-            return user;
-        }
+        public async Task<Tbl_User> GetUserForPassChange(string id, string Password) 
+            => await _db.UserRepository.GetByIdAsync(id);
+        
 
         public async Task<bool> UpdateUserPassword(Tbl_User user, string NewPassword)
         {

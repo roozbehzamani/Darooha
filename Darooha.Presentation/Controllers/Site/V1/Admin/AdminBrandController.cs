@@ -148,16 +148,32 @@ namespace Darooha.Presentation.Controllers.Site.V1.Admin
             var brandFromRepo = await _db.BrandRepository.GetByIdAsync(id);
             if (brandFromRepo != null)
             {
-                var brand = _mapper.Map(brandForUpdateDto, brandFromRepo);
-                _db.BrandRepository.Update(brand);
-
-                if (await _db.SaveAsync())
+                var uploadRes = await _uploadService.UploadPic(
+                    brandForUpdateDto.File,
+                        userId,
+                        _env.WebRootPath,
+                        $"{Request.Scheme ?? ""}://{Request.Host.Value ?? ""}{Request.PathBase.Value ?? ""}",
+                        "0",
+                        "BrandLogo"
+                    );
+                if (uploadRes.Status)
                 {
-                    return NoContent();
+                    brandFromRepo.BrandLogoUrl = uploadRes.Url;
+                    var brand = _mapper.Map(brandForUpdateDto, brandFromRepo);
+                    _db.BrandRepository.Update(brand);
+
+                    if (await _db.SaveAsync())
+                    {
+                        return NoContent();
+                    }
+                    else
+                    {
+                        return BadRequest("خطا در بروزرسانی اطلاعات");
+                    }
                 }
                 else
                 {
-                    return BadRequest("خطا در بروزرسانی اطلاعات");
+                    return BadRequest(uploadRes.Message);
                 }
             }
             else
